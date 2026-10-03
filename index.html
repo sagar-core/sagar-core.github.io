@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sagar P | Aspiring Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Sagar P, 2nd-year Information Science & Engineering student at Atria Institute of Technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <a class="logo" href="#home">sagar<span>.</span></a>
+    <nav id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-outline nav-btn" href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+    <a class="btn nav-btn" href="#contact">Let's Connect ↗</a>
+    <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <!-- Left Column: Identity & Highlights -->
+        <div class="hero-content">
+          <div class="pill status-pill">
+            <i></i>
+            <span>Open to opportunities · 2nd Year ISE @ Atria IT</span>
+          </div>
+
+          <h1 class="hero-name">
+            I AM <br><span class="accent-text">SAGAR P</span>
+          </h1>
+
+          <h2 class="hero-role">
+            ASPIRING FULL-STACK DEVELOPER<em>.</em>
+          </h2>
+
+          <p class="hero-intro">
+            Curious engineer crafting software from backend logic and algorithms to clean, intuitive user interfaces.
+          </p>
+
+          <ul class="hero-bullets">
+            <li>
+              <span class="bullet-icon">✦</span>
+              <span><strong>2nd Year ISE</strong> at Atria Institute of Technology (2025 – 2029)</span>
+            </li>
+            <li>
+              <span class="bullet-icon">✦</span>
+              <span><strong>9.3 CGPA</strong> with strong fundamentals in C++, Data Structures &amp; Math</span>
+            </li>
+            <li>
+              <span class="bullet-icon">✦</span>
+              <span><strong>Project Lead &amp; Builder</strong> passionate about practical web apps &amp; AI tools</span>
+            </li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn hero-cta" href="#projects">Explore Projects ↓</a>
+            <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+            <a class="btn btn-outline" href="#contact">Let's Connect ↗</a>
+            <div class="social-quick">
+              <a href="https://github.com/sagar-core" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/sagar-p-9a7058388" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+              </a>
+              <a href="mailto:sagar.pv2006@gmail.com" aria-label="Send email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Centerpiece & Tech Badge Core -->
+        <div class="hero-visual">
+          <div class="stage" id="heroStage">
+            <div class="ambient-glow"></div>
+            <div class="center-core">
+              <svg class="dev-avatar-svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background Gradient Circle -->
+                <circle cx="70" cy="70" r="70" fill="url(#coreBg)"/>
+                
+                <!-- Ambient Code Glow Elements -->
+                <circle cx="70" cy="50" r="42" fill="url(#faceGlow)" opacity="0.4"/>
+                
+                <!-- Floating Minimalist Code Brackets -->
+                <path d="M26 48L18 56L26 64" stroke="#ef6351" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+                <path d="M114 48L122 56L114 64" stroke="#0b8a74" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+                <path d="M64 22L56 34" stroke="#d4962a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+                <!-- Dark Tech Hoodie / Shoulders -->
+                <path d="M24 135C24 108 44 98 70 98C96 98 116 108 116 135V140H24V135Z" fill="#1e1822"/>
+                <path d="M48 104L70 128L92 104" stroke="#2d2535" stroke-width="3" stroke-linecap="round"/>
+                <!-- Coral & Teal Hoodie Drawstrings / Accents -->
+                <path d="M62 112V130" stroke="#ef6351" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="62" cy="132" r="2" fill="#ef6351"/>
+                <path d="M78 112V128" stroke="#0b8a74" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="78" cy="130" r="2" fill="#0b8a74"/>
+
+                <!-- Neck -->
+                <path d="M57 88H83V104C83 104 77 108 70 108C63 108 57 104 57 104V88Z" fill="#e8ba95"/>
+                
+                <!-- Face Base -->
+                <rect x="50" y="44" width="40" height="48" rx="20" fill="#f7cfaf"/>
+                
+                <!-- Ears -->
+                <circle cx="48" cy="66" r="6" fill="#e8ba95"/>
+                <circle cx="92" cy="66" r="6" fill="#e8ba95"/>
+
+                <!-- Studio Over-Ear Headphones -->
+                <!-- Headband -->
+                <path d="M40 60C40 40 52 30 70 30C88 30 100 40 100 60" stroke="#332c3d" stroke-width="6" stroke-linecap="round"/>
+                <path d="M42 56C42 42 54 34 70 34C86 34 98 42 98 56" stroke="#ef6351" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+                <!-- Ear Cups -->
+                <rect x="36" y="56" width="10" height="22" rx="5" fill="#201a28" stroke="#ef6351" stroke-width="2"/>
+                <rect x="94" y="56" width="10" height="22" rx="5" fill="#201a28" stroke="#0b8a74" stroke-width="2"/>
+                <!-- Ear Cup Highlights -->
+                <circle cx="41" cy="67" r="2.5" fill="#ef6351"/>
+                <circle cx="99" cy="67" r="2.5" fill="#0b8a74"/>
+
+                <!-- Modern Swept Hair -->
+                <path d="M48 48C46 36 56 32 70 32C84 32 94 36 92 48C88 42 80 40 70 40C58 40 52 44 48 48Z" fill="#261e2c"/>
+                <path d="M48 46C54 42 62 44 70 43C78 42 86 38 90 46C82 43 72 44 64 45C56 46 50 48 48 46Z" fill="#3a2f42"/>
+
+                <!-- Coder Glasses with Tech Code Glow -->
+                <rect x="52" y="58" width="15" height="12" rx="3.5" fill="#1b1722" stroke="#d4962a" stroke-width="2"/>
+                <rect x="73" y="58" width="15" height="12" rx="3.5" fill="#1b1722" stroke="#d4962a" stroke-width="2"/>
+                <path d="M67 63H73" stroke="#d4962a" stroke-width="2"/>
+                <!-- Glowing Code Reflections on Lenses -->
+                <path d="M55 62L58 64L55 66" stroke="#0b8a74" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M62 65H64" stroke="#ef6351" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M76 63L78 65L76 67" stroke="#ef6351" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M82 63H84" stroke="#0b8a74" stroke-width="1.2" stroke-linecap="round"/>
+
+                <!-- Nose & Friendly Smile -->
+                <path d="M70 70V73" stroke="#d89f78" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M66 79C68 81 72 81 74 79" stroke="#b87a55" stroke-width="2" stroke-linecap="round"/>
+
+                <!-- Gradients -->
+                <defs>
+                  <radialGradient id="coreBg" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#1e1824"/>
+                    <stop offset="100%" stop-color="#0e0a12"/>
+                  </radialGradient>
+                  <radialGradient id="faceGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ef6351"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Slow Orbiting Tech Badges -->
+            <div class="tech-ring">
+              <div class="badge-item" style="--angle: 0deg" title="C++">
+                <span class="badge-pill pill-cpp"><b>C++</b></span>
+              </div>
+              <div class="badge-item" style="--angle: 60deg" title="Python">
+                <span class="badge-pill pill-py"><b>Python</b></span>
+              </div>
+              <div class="badge-item" style="--angle: 120deg" title="Java">
+                <span class="badge-pill pill-java"><b>Java</b></span>
+              </div>
+              <div class="badge-item" style="--angle: 180deg" title="JavaScript">
+                <span class="badge-pill pill-js"><b>JS</b></span>
+              </div>
+              <div class="badge-item" style="--angle: 240deg" title="CSS3">
+                <span class="badge-pill pill-css"><b>CSS</b></span>
+              </div>
+              <div class="badge-item" style="--angle: 300deg" title="HTML5">
+                <span class="badge-pill pill-html"><b>HTML</b></span>
+              </div>
+            </div>
+
+            <div class="status-card">
+              <span class="status-dot"></span>
+              <span>Currently building: <strong>C++ Algorithms &amp; Web Apps</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="sec" id="about">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow coral">About me</p>
+          <h2 class="big">Curious by nature. <em class="coral">Builder</em> by choice.</h2>
+        </div>
+        <div class="reveal">
+          <p class="lead">I'm Sagar, a second-year Information Science and Engineering student at Atria Institute of Technology.</p>
+          <p class="muted">
+            I'm passionate about full-stack engineering, algorithmic problem solving, and building software that addresses real-world problems. Whether it's modeling mathematical equations into code, connecting Gemini AI to web interfaces, or leading project teams, I adapt quickly and love learning through hands-on development.
+          </p>
+          <div class="stats stats-4">
+            <div><b data-count="9.3" data-dec="1">9.3</b><small>CGPA (B.E.)</small></div>
+            <div><b data-count="90">90</b><small>% PU Science</small></div>
+            <div><b data-count="92">92</b><small>% 10th School</small></div>
+            <div><b data-count="2029">2029</b><small>Graduation</small></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub reveal">Education</h3>
+      <div class="edu-wrap">
+        <ol class="timeline">
+        <li class="reveal">
+          <span class="dot teal"></span>
+          <small>2025 – 2029 · Current</small>
+          <h4>B.E. Information Science &amp; Engineering</h4>
+          <p class="muted">Atria Institute of Technology · 9.3 CGPA</p>
+          <p>Focus: Software engineering, algorithmic problem solving, data structures, and web technologies.</p>
+          <div class="chips">
+            <span>Data Structures</span>
+            <span>DBMS</span>
+            <span>OOP</span>
+            <span>Operating Systems</span>
+            <span>Discrete Mathematics</span>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="dot coral"></span>
+          <small>Completed · 90% Distinction</small>
+          <h4>PU Science (PCMC)</h4>
+          <p class="muted">Seshadripuram PU College · 90%</p>
+          <p>Rigorous science foundation in mathematics, physics, and computer science fundamentals.</p>
+          <div class="chips">
+            <span>Computer Science</span>
+            <span>Mathematics</span>
+            <span>Physics</span>
+            <span>Chemistry</span>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="dot coral"></span>
+          <small>Completed · 92% Distinction</small>
+          <h4>Sathya English High School</h4>
+          <p class="branch-tag">| RT Nagar Public School</p>
+          <p class="muted">Secondary School Leaving Certificate (SSLC) · 92%</p>
+          <p>Strong academic foundation in science, mathematics, and analytical reasoning.</p>
+          <div class="chips">
+            <span>Mathematics</span>
+            <span>Science</span>
+            <span>Analytical Foundations</span>
+          </div>
+        </li>
+      </ol>
+        <aside class="edu-art reveal" aria-hidden="true">
+          <svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- soft background blob + dashed ring -->
+            <path d="M70 230C50 130 130 50 220 62C320 76 370 160 350 260C332 350 250 410 160 390C100 376 82 300 70 230Z" fill="#d9f0e9"/>
+            <circle cx="205" cy="225" r="168" stroke="#0b8a74" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="3 9"/>
+
+            <!-- floating: lightbulb -->
+            <g class="float f1">
+              <circle cx="78" cy="118" r="20" fill="#fcf4e4" stroke="#d4962a" stroke-width="2.5"/>
+              <path d="M71 140h14M73 146h10" stroke="#d4962a" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M78 108v10M73 113l5 5 5-5" stroke="#d4962a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <!-- floating: code bubble -->
+            <g class="float f2">
+              <rect x="290" y="92" width="78" height="42" rx="14" fill="#fff" stroke="#ef6351" stroke-width="2.5"/>
+              <path d="M300 134l-6 12 16-8z" fill="#fff" stroke="#ef6351" stroke-width="2.5" stroke-linejoin="round"/>
+              <text x="329" y="119" text-anchor="middle" font-family="Space Grotesk, monospace" font-weight="700" font-size="18" fill="#ef6351">&lt;/&gt;</text>
+            </g>
+            <!-- floating: sparkles -->
+            <g class="float f3">
+              <path d="M335 215l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#d4962a"/>
+              <path d="M58 230l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#7e57b5"/>
+              <circle cx="110" cy="70" r="4" fill="#ef6351"/>
+              <circle cx="352" cy="300" r="5" fill="#0b8a74"/>
+            </g>
+
+            <!-- desk -->
+            <rect x="40" y="366" width="320" height="14" rx="7" fill="#e7c48e"/>
+            <rect x="60" y="380" width="10" height="40" rx="4" fill="#d9b277"/>
+            <rect x="330" y="380" width="10" height="40" rx="4" fill="#d9b277"/>
+
+            <!-- body: hoodie -->
+            <path d="M104 366C104 300 148 268 200 268C252 268 296 300 296 366Z" fill="#7e57b5"/>
+            <path d="M166 272C174 296 226 296 234 272" stroke="#5f3f93" stroke-width="5" stroke-linecap="round"/>
+            <path d="M184 288v30" stroke="#fdeee9" stroke-width="3" stroke-linecap="round"/>
+            <path d="M216 288v26" stroke="#fdeee9" stroke-width="3" stroke-linecap="round"/>
+            <!-- neck -->
+            <rect x="186" y="236" width="28" height="36" rx="10" fill="#e8ba95"/>
+            <!-- ears + head -->
+            <circle cx="158" cy="208" r="8" fill="#e8ba95"/>
+            <circle cx="242" cy="208" r="8" fill="#e8ba95"/>
+            <ellipse cx="200" cy="205" rx="41" ry="47" fill="#f7cfaf"/>
+            <!-- hair sides -->
+            <path d="M160 190C158 170 168 164 176 168L176 200C170 204 162 204 160 190Z" fill="#261e2c"/>
+            <path d="M240 190C242 170 232 164 224 168L224 200C230 204 238 204 240 190Z" fill="#261e2c"/>
+            <!-- face -->
+            <path d="M175 192q10-7 20 0M205 192q10-7 20 0" stroke="#261e2c" stroke-width="3" stroke-linecap="round"/>
+            <path d="M178 208q7 7 14 0M208 208q7 7 14 0" stroke="#261e2c" stroke-width="3.2" stroke-linecap="round"/>
+            <circle cx="176" cy="224" r="6" fill="#ef6351" opacity=".28"/>
+            <circle cx="224" cy="224" r="6" fill="#ef6351" opacity=".28"/>
+            <path d="M188 226q12 14 24 0z" fill="#fff" stroke="#b87a55" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- graduation cap -->
+            <path d="M170 164v20c0 12 60 12 60 0v-20z" fill="#2b2433"/>
+            <path d="M200 124L282 152L200 180L118 152Z" fill="#1f1a26"/>
+            <path d="M200 124L282 152L200 180L118 152Z" stroke="#3a3146" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="200" cy="152" r="5" fill="#d4962a"/>
+            <path d="M200 152L268 158V198" stroke="#d4962a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M262 198h12l-2 18h-8z" fill="#d4962a"/>
+
+            <!-- laptop (back of lid facing us) -->
+            <rect x="136" y="300" width="128" height="70" rx="9" fill="#ece8f6" stroke="#cfc6e8" stroke-width="2.5"/>
+            <circle cx="200" cy="335" r="9" fill="#ef6351"/>
+            <path d="M196 335l3 3 6-6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- hands -->
+            <circle cx="136" cy="360" r="9" fill="#f7cfaf"/>
+            <circle cx="264" cy="360" r="9" fill="#f7cfaf"/>
+
+            <!-- books -->
+            <rect x="52" y="352" width="72" height="14" rx="3" fill="#ef6351"/>
+            <rect x="58" y="338" width="60" height="14" rx="3" fill="#d4962a"/>
+            <rect x="54" y="324" width="66" height="14" rx="3" fill="#0b8a74"/>
+            <path d="M64 331h20M66 345h18M62 359h24" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+            <!-- mug + steam -->
+            <rect x="302" y="338" width="30" height="28" rx="6" fill="#fff" stroke="#cfc6e8" stroke-width="2.5"/>
+            <path d="M332 346h7a6 6 0 010 14h-7" stroke="#cfc6e8" stroke-width="2.5"/>
+            <path class="steam" d="M312 330c-4-6 4-8 0-14M322 330c-4-6 4-8 0-14" stroke="#b9b2cc" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (Bento Competency Cards - No Arbitrary Progress Bars) -->
+    <section class="sec alt" id="skills">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow teal">Skills &amp; strengths</p>
+          <h2 class="big">The tools. The thinking. <em class="teal">The drive.</em></h2>
+          <p class="muted">
+            A practical toolkit focused on real-world application, continuous learning, and solid computer science fundamentals.
+          </p>
+        </div>
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Skills Categories">
+            <button class="on" data-tab="p">Programming</button>
+            <button data-tab="w">Web Development</button>
+            <button data-tab="c">Core Strengths</button>
+          </div>
+
+          <!-- Tab 1: Programming -->
+          <div class="panel on" id="p">
+            <div class="bento-grid">
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">C++</span>
+                    <span class="tag tag-coral">Proficient</span>
+                  </div>
+                  <span class="skill-category">DSA &amp; Systems</span>
+                </div>
+                <p class="skill-desc">
+                  Data structures, algorithmic complexity, object-oriented design, and problem solving for competitive coding.
+                </p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">Python</span>
+                    <span class="tag tag-teal">Familiar</span>
+                  </div>
+                  <span class="skill-category">Scripting &amp; AI</span>
+                </div>
+                <p class="skill-desc">
+                  Rapid prototyping, Gemini API integrations, automation scripts, and structured data handling.
+                </p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">Java</span>
+                    <span class="tag tag-gold">Fundamentals</span>
+                  </div>
+                  <span class="skill-category">Core OOP</span>
+                </div>
+                <p class="skill-desc">
+                  Object-oriented principles, modular architecture, core Java concepts, and academic coursework.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Web Development -->
+          <div class="panel" id="w">
+            <div class="bento-grid">
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">HTML5 &amp; CSS3</span>
+                    <span class="tag tag-teal">Comfortable</span>
+                  </div>
+                  <span class="skill-category">Modern Frontend</span>
+                </div>
+                <p class="skill-desc">
+                  Semantic document structures, modern responsive layouts with Flexbox/Grid, CSS custom properties, and smooth animations.
+                </p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">JavaScript (ES6+)</span>
+                    <span class="tag tag-coral">Learning Fast</span>
+                  </div>
+                  <span class="skill-category">Client &amp; Async</span>
+                </div>
+                <p class="skill-desc">
+                  DOM manipulation, Fetch API, asynchronous programming, modern ES6+ syntax, and building interactive user flows.
+                </p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-head">
+                  <div class="skill-title-grp">
+                    <span class="skill-name">Git &amp; GitHub</span>
+                    <span class="tag tag-teal">Daily Workflow</span>
+                  </div>
+                  <span class="skill-category">Version Control</span>
+                </div>
+                <p class="skill-desc">
+                  Branch management, version tracking, open-source exploration, and collaborative project workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Core Strengths -->
+          <div class="panel" id="c">
+            <div class="chips big-chips">
+              <span>Problem Solving</span>
+              <span>Project Leadership</span>
+              <span>Mathematical Modeling</span>
+              <span>Event Management</span>
+              <span>Team Collaboration</span>
+              <span>Fast Learner</span>
+              <span>Initiative &amp; Ownership</span>
+            </div>
+            <p class="muted mt-20">
+              Passionate about contributing to campus technical communities, mentoring peers, and taking proactive ownership in hackathons and club activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="sec" id="services">
+      <p class="eyebrow gold">What I build</p>
+      <h2 class="big reveal">Ideas into useful things<span class="gold">.</span></h2>
+      <div class="cards">
+        <article class="card c1 reveal">
+          <h4>Full-Stack Applications</h4>
+          <p>End-to-end web applications combining intuitive frontends with well-structured application logic and clean data flow.</p>
+          <div class="chips"><span>Web Apps</span><span>Interactive UIs</span><span>Client-Server Logic</span></div>
+        </article>
+        <article class="card c2 reveal">
+          <h4>Algorithmic &amp; Math Modeling</h4>
+          <p>Translating theoretical mathematical concepts (such as Linear Diophantine Equations) into optimized, working software.</p>
+          <div class="chips"><span>Algorithms</span><span>Optimization</span><span>Discrete Math</span></div>
+        </article>
+        <article class="card c3 reveal">
+          <h4>AI &amp; API Integration</h4>
+          <p>Connecting cutting-edge APIs like Google Gemini to structured datasets and chat interfaces that solve practical needs.</p>
+          <div class="chips"><span>Gemini API</span><span>Knowledge Bases</span><span>Prompt Logic</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="sec" id="projects">
+      <div class="reveal">
+        <p class="eyebrow coral">Featured Projects</p>
+        <h2 class="big">Built to solve<span class="coral">.</span></h2>
+        <p class="muted section-sub">Practical software, algorithmic research, and campus-tested prototypes.</p>
+      </div>
+
+      <div class="projects">
+        <!-- Project 1: ATM Cash Combination Optimizer (Math & Algo Lead) -->
+        <article class="proj reveal highlight-proj">
+          <div class="proj-badge">
+            <span class="tag tag-coral">Project Lead · Math &amp; Algorithms</span>
+          </div>
+          <h4>ATM Cash Combination Optimizer</h4>
+          <p class="muted">
+            <strong>Problem:</strong> ATMs must determine valid banknote distributions for exact cash withdrawals while adhering to hardware cassette limits and minimizing total dispensed notes.
+          </p>
+          <p>
+            <strong>Solution:</strong> Formulated currency dispensing using <strong>Linear Diophantine Equations</strong> (<em>a₁x₁ + a₂x₂ + … = N</em>). Implemented GCD/Bézout solvability tests to verify feasible payouts and computed all non-negative integer note combinations to select the optimal payout.
+          </p>
+          <ul class="feature-list">
+            <li>Linear Diophantine mathematical model</li>
+            <li>Extended Euclidean &amp; GCD solvability checks</li>
+            <li>Combinatorial non-negative note allocation</li>
+            <li>Denomination constraint &amp; edge case handling</li>
+          </ul>
+          <div class="chips">
+            <span>Linear Diophantine</span>
+            <span>C++ / Python</span>
+            <span>Algorithms</span>
+            <span>Number Theory</span>
+            <span>Optimization</span>
+          </div>
+          <a class="link" href="https://github.com/sagar-core/ATM-Cash-Finder" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </article>
+
+        <!-- Project 2: Student–Teacher Appointment Platform (No link as requested) -->
+        <article class="proj reveal">
+          <h4>Student–Teacher Appointment Platform</h4>
+          <p class="muted">
+            <strong>Problem:</strong> College students struggle with coordinating meeting slots and tracking faculty availability manually across busy schedules.
+          </p>
+          <p>
+            <strong>Solution:</strong> A full-stack web application built with Python/Flask and MySQL where students view availability and request appointment slots, and teachers manage bookings from an administrative dashboard.
+          </p>
+          <ul class="feature-list">
+            <li>Student &amp; faculty role-based authentication</li>
+            <li>Real-time availability slot selection</li>
+            <li>Bulk accept &amp; schedule management</li>
+            <li>Custom rejection notes &amp; reason logging</li>
+          </ul>
+          <div class="chips">
+            <span>Python / Flask</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
+            <span>HTML5 &amp; CSS3</span>
+            <span>Role Auth</span>
+            <span>Admin Dashboard</span>
+          </div>
+        </article>
+
+        <!-- Project 3: Donor Relationship Prototype (Currently Building) -->
+        <article class="proj now reveal">
+          <span class="pill"><i></i>Currently building · Centre for Wildlife Studies</span>
+          <h4>Donor Relationship Prototype</h4>
+          <p class="muted">Supporting wildlife conservation outreach through structured digital tools.</p>
+          <p>
+            A CRM prototype managing donor histories, campaign engagement analytics, communication logs, and AI-assisted next-step engagement recommendations.
+          </p>
+          <div class="chips">
+            <span>CRM Prototype</span>
+            <span>Data Workflows</span>
+            <span>AI Assistance</span>
+            <span>Conservation Tech</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / LEADERSHIP -->
+    <section class="sec alt" id="experience">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow teal">Leadership &amp; development</p>
+          <h2 class="big">Always moving <em class="teal">forward.</em></h2>
+          <p class="muted">
+            The work outside a job title matters too: leading academic projects, taking initiative in clubs, and building in public.
+          </p>
+        </div>
+        <ul class="list reveal">
+          <li>
+            <h4>Project Leadership</h4>
+            <p>Led the ATM Cash Combination Finder project, directing mathematical modeling, algorithmic implementation, and team coordination.</p>
+          </li>
+          <li>
+            <h4>Event Organizer · Cultural Committee Atria (CCA)</h4>
+            <p>Active organizer for CCA, planning and executing college-wide cultural fests, coordinating volunteer teams, and managing student engagement logistics.</p>
+          </li>
+          <li>
+            <h4>Building Beyond Coursework</h4>
+            <p>Developing practical tools (like the appointment platform &amp; AI campus bot) to address real campus pain points.</p>
+          </li>
+          <li>
+            <h4>Active Technical Growth</h4>
+            <p>Consistently practicing data structures in C++, mastering modern JavaScript, and building full-stack applications.</p>
+          </li>
+        </ul>
+      </div>
+      <p class="mantra reveal">Learn<i class="coral">.</i> Build<i class="teal">.</i> Solve<i class="gold">.</i> Adapt<i class="gold">.</i> Repeat<i class="coral">.</i></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec dark" id="contact">
+      <p class="eyebrow gold">Get in touch</p>
+      <h2 class="big reveal">Have an idea worth building? <span class="gold">Let's connect.</span></h2>
+      <p class="muted">Open to technical club roles, collaborative projects, internships, and interesting problems.</p>
+      
+      <div class="contacts">
+        <a href="mailto:sagar.pv2006@gmail.com"><small>Email</small>sagar.pv2006@gmail.com</a>
+        <a href="https://linkedin.com/in/sagar-p-9a7058388" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/sagar-p-9a7058388</a>
+        <a href="https://github.com/sagar-core" target="_blank" rel="noopener"><small>GitHub</small>github.com/sagar-core</a>
+        <a href="tel:+919844012199"><small>Phone</small>+91 98440 12199</a>
+      </div>
+
+      <button class="btn light copy-btn" id="copyEmailBtn" data-copy="sagar.pv2006@gmail.com">
+        <span class="btn-text">Copy email address</span>
+      </button>
+
+      <footer>
+        <span>© <span id="yr">2026</span> Sagar P · Bengaluru, India</span>
+        <a href="#home">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>
