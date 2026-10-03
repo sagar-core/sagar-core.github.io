@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar P - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary-blue: #1d4ed8;
+      --navy-dark: #1e3a8a;
+      --card-bg: #b9cadc;
+      --card-text: #1e293b;
+      --text-main: #27272a;
+      --text-muted: #52525b;
+      --text-heading: #18181b;
+      --border-blue: #2563eb;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #e2e8f0;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Action bar for easy printing & download (hidden during print) */
+    .action-bar {
+      width: 210mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 10px 18px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .action-bar .info {
+      font-size: 13px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .action-bar .info strong {
+      color: #0f172a;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #1d4ed8;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1e40af;
+      box-shadow: 0 2px 8px rgba(29, 78, 216, 0.35);
+    }
+
+    .btn-outline {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    .btn-outline:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* A4 Resume Container strictly matching 210mm x 297mm */
+    .resume-wrapper {
+      width: 210mm;
+      height: 297mm;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+      border: 2px solid var(--border-blue);
+      border-bottom: 8px solid var(--border-blue);
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left Decorative Terrazzo Bar */
+    .left-accent-bar {
+      width: 48px;
+      min-width: 48px;
+      max-width: 48px;
+      height: 100%;
+      background: var(--navy-dark);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* Main Resume Content Area */
+    .resume-main {
+      flex: 1;
+      height: 100%;
+      padding: 26px 30px 22px 28px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Header with Candidate Name & Tagline */
+    .resume-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 4px;
+    }
+
+    .candidate-name {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #1e293b;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .candidate-subtitle {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #475569;
+    }
+
+    /* Two-Column Layout */
+    .columns-container {
+      display: grid;
+      grid-template-columns: 1.48fr 1fr;
+      column-gap: 24px;
+      flex: 1;
+      align-items: start;
+    }
+
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #1e293b;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Section content styling */
+    .summary-text {
+      font-size: 9px;
+      line-height: 1.44;
+      color: #3f3f46;
+      text-align: justify;
+    }
+
+    /* Projects / Items */
+    .project-entry {
+      margin-bottom: 8px;
+    }
+
+    .project-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-role {
+      font-size: 8.5px;
+      font-style: italic;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .entry-tech {
+      font-size: 8.5px;
+      color: #1d4ed8;
+      font-weight: 600;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .entry-link {
+      font-size: 8px;
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .entry-link:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .bullets-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .bullets-list li {
+      font-size: 8.7px;
+      line-height: 1.38;
+      color: #334155;
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2.5px;
+      text-align: left;
+    }
+
+    .bullets-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: #1e293b;
+      font-size: 9px;
+    }
+
+    /* Right Column: Contact Card */
+    .contact-card {
+      background-color: var(--card-bg);
+      border-radius: 4px;
+      padding: 12px 14px 10px 14px;
+      color: var(--card-text);
+    }
+
+    .contact-card .section-title {
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4.5px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 8.6px;
+      font-weight: 500;
+      color: #1e293b;
+      text-decoration: none;
+    }
+
+    .contact-item svg {
+      width: 12px;
+      height: 12px;
+      color: #0f172a;
+      flex-shrink: 0;
+    }
+
+    .contact-item span {
+      word-break: break-all;
+    }
+
+    .contact-item:hover span {
+      color: #000;
+    }
+
+    /* Skills List */
+    .skills-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .skill-row {
+      font-size: 8.7px;
+      line-height: 1.36;
+      color: #334155;
+      padding-left: 11px;
+      position: relative;
+    }
+
+    .skill-row::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: #1e293b;
+      font-size: 9px;
+    }
+
+    .skill-row strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* Education Items */
+    .edu-entry {
+      margin-bottom: 6px;
+    }
+
+    .edu-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+
+    .edu-school {
+      font-size: 8.5px;
+      color: #334155;
+      margin-bottom: 1px;
+    }
+
+    .edu-details {
+      font-size: 8.3px;
+      font-style: italic;
+      color: #475569;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .edu-badge {
+      font-weight: 700;
+      color: #1d4ed8;
+      font-style: normal;
+    }
+
+    /* Languages Bar */
+    .lang-item {
+      margin-bottom: 5px;
+    }
+
+    .lang-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 2px;
+    }
+
+    .lang-level {
+      font-size: 8px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .lang-bar {
+      height: 3.5px;
+      background: #e2e8f0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .lang-progress {
+      height: 100%;
+      background: #1d4ed8;
+      border-radius: 2px;
+    }
+
+    /* Hackathons & Achievements section in left column */
+    .achievement-entry {
+      margin-bottom: 4px;
+    }
+
+    .achievement-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Print Styles: Exact 1 Page Guarantee */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: 2px solid var(--border-blue) !important;
+        border-bottom: 8px solid var(--border-blue) !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web View Action Bar -->
+  <div class="action-bar">
+    <div class="info">
+      <strong>Sagar P — Professional Resume</strong> &bull; Custom GDG on Campus & Full-Stack Format (A4 Single Page)
+    </div>
+    <div class="action-buttons">
+      <button class="btn btn-outline" onclick="window.history.back()">Back to Portfolio</button>
+      <button class="btn btn-primary" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Single-Page Resume Container -->
+  <div class="resume-wrapper">
+
+    <!-- Left Terrazzo Art Bar -->
+    <div class="left-accent-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="1123" viewBox="0 0 50 1123" style="display:block; width:100%; height:100%;">
+  <defs>
+    <linearGradient id="stripBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#19489e" />
+      <stop offset="50%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+  <rect width="50" height="1123" fill="url(#stripBg)" />
+  <polygon points="6.4,10.9 16.1,7.5 12.7,17.1" fill="#7dd3fc" opacity="0.96" /><polygon points="38.2,26.4 46.9,25.1 48.2,32.5 40.2,35.2" fill="#e0f2fe" opacity="0.96" /><polygon points="0.3,44.5 21.4,37.0 14.0,58.1" fill="#ffffff" opacity="0.87" /><rect x="38.9" y="61.8" width="9.4" height="4.7" rx="2.3" transform="rotate(-53.4 43.6 64.2)" fill="#bae6fd" opacity="0.95" /><ellipse cx="36.9" cy="85.4" rx="4.0" ry="5.5" transform="rotate(44.3 36.9 85.4)" fill="#bae6fd" opacity="1.00" /><polygon points="30.4,99.9 41.0,98.1 34.2,107.9" fill="#bae6fd" opacity="1.00" /><polygon points="19.1,115.2 25.7,114.2 26.7,119.8 20.6,121.8" fill="#dbeafe" opacity="0.88" /><polygon points="3.7,133.1 23.0,126.3 16.2,145.6" fill="#ffffff" opacity="0.98" /><rect x="22.4" y="149.4" width="7.7" height="3.8" rx="1.9" transform="rotate(8.0 26.2 151.3)" fill="#ffffff" opacity="0.88" /><ellipse cx="7.2" cy="168.7" rx="9.3" ry="13.0" transform="rotate(23.9 7.2 168.7)" fill="#7dd3fc" opacity="0.87" /><rect x="16.2" y="184.7" width="10.1" height="5.0" rx="2.5" transform="rotate(-24.9 21.3 187.2)" fill="#7dd3fc" opacity="0.92" /><polygon points="16.2,201.8 24.6,200.5 25.9,207.6 18.2,210.2" fill="#ffffff" opacity="0.93" /><ellipse cx="28.2" cy="228.8" rx="5.2" ry="7.2" transform="rotate(37.2 28.2 228.8)" fill="#bae6fd" opacity="0.86" /><polygon points="16.4,249.0 23.6,247.9 24.7,254.0 18.1,256.2" fill="#bae6fd" opacity="0.87" /><rect x="0.1" y="268.5" width="14.3" height="7.1" rx="3.6" transform="rotate(38.5 7.3 272.1)" fill="#93c5fd" opacity="0.98" /><polygon points="28.1,292.6 42.5,287.6 37.4,301.9" fill="#bae6fd" opacity="0.95" /><rect x="32.1" y="315.0" width="8.8" height="4.4" rx="2.2" transform="rotate(-57.5 36.5 317.2)" fill="#dbeafe" opacity="0.94" /><polygon points="21.7,329.7 30.2,335.8 27.3,343.3" fill="#dbeafe" opacity="0.93" /><polygon points="19.7,353.8 35.0,353.1 30.6,365.4" fill="#93c5fd" opacity="0.91" /><rect x="11.4" y="366.6" width="18.1" height="9.0" rx="4.5" transform="rotate(17.9 20.5 371.1)" fill="#ffffff" opacity="0.88" /><polygon points="6.2,388.4 13.4,391.8 8.8,399.4" fill="#ffffff" opacity="0.94" /><polygon points="12.8,409.3 19.0,416.3 16.9,418.5" fill="#bae6fd" opacity="1.00" /><polygon points="1.7,430.2 13.6,427.4 5.4,437.1" fill="#7dd3fc" opacity="0.87" /><polygon points="32.3,445.2 44.0,443.4 45.9,453.4 35.0,457.0" fill="#bae6fd" opacity="0.99" /><ellipse cx="41.8" cy="466.9" rx="4.4" ry="6.2" transform="rotate(-37.9 41.8 466.9)" fill="#7dd3fc" opacity="0.99" /><ellipse cx="24.6" cy="486.2" rx="7.2" ry="10.0" transform="rotate(30.9 24.6 486.2)" fill="#e0f2fe" opacity="0.98" /><polygon points="26.5,503.3 35.2,500.3 32.1,509.0" fill="#7dd3fc" opacity="0.94" /><polygon points="1.9,523.9 13.1,522.2 14.8,531.6 4.5,535.1" fill="#ffffff" opacity="0.91" /><polygon points="16.5,539.9 36.5,545.6 29.1,557.7" fill="#bae6fd" opacity="0.97" /><rect x="1.7" y="563.9" width="17.0" height="8.5" rx="4.2" transform="rotate(39.6 10.2 568.2)" fill="#dbeafe" opacity="0.85" /><polygon points="22.0,588.4 32.3,590.1 28.6,597.5" fill="#93c5fd" opacity="0.99" /><ellipse cx="7.9" cy="604.6" rx="7.1" ry="10.0" transform="rotate(14.8 7.9 604.6)" fill="#93c5fd" opacity="0.96" /><polygon points="19.2,625.3 28.1,622.1 24.9,631.0" fill="#ffffff" opacity="0.99" /><polygon points="32.6,647.9 42.5,644.4 39.0,654.3" fill="#ffffff" opacity="0.90" /><polygon points="36.9,655.4 49.6,662.2 45.3,671.1" fill="#e0f2fe" opacity="0.95" /><rect x="28.4" y="679.7" width="10.9" height="5.5" rx="2.7" transform="rotate(-4.6 33.8 682.4)" fill="#ffffff" opacity="0.87" /><ellipse cx="16.2" cy="697.6" rx="4.7" ry="6.5" transform="rotate(2.4 16.2 697.6)" fill="#dbeafe" opacity="0.86" /><polygon points="5.5,719.1 20.3,713.9 15.1,728.7" fill="#ffffff" opacity="0.98" /><polygon points="4.2,735.0 19.8,732.6 22.2,745.8 7.8,750.6" fill="#dbeafe" opacity="0.87" /><ellipse cx="33.7" cy="756.6" rx="6.3" ry="8.8" transform="rotate(-18.6 33.7 756.6)" fill="#ffffff" opacity="0.91" /><polygon points="8.6,774.6 18.1,772.6 13.7,783.6" fill="#ffffff" opacity="0.96" /><polygon points="9.9,788.9 23.1,784.2 18.4,797.4" fill="#ffffff" opacity="0.89" /><ellipse cx="27.5" cy="811.0" rx="6.8" ry="9.5" transform="rotate(-13.4 27.5 811.0)" fill="#7dd3fc" opacity="0.99" /><polygon points="10.8,831.0 17.9,829.9 19.0,836.0 12.4,838.2" fill="#bae6fd" opacity="0.99" /><polygon points="10.2,848.9 24.1,846.8 26.2,858.5 13.4,862.8" fill="#ffffff" opacity="0.95" /><polygon points="25.0,870.6 31.7,869.5 32.8,875.3 26.5,877.3" fill="#bae6fd" opacity="0.90" /><ellipse cx="39.6" cy="889.4" rx="4.6" ry="6.5" transform="rotate(37.4 39.6 889.4)" fill="#ffffff" opacity="0.91" /><ellipse cx="41.9" cy="905.3" rx="9.1" ry="12.7" transform="rotate(2.4 41.9 905.3)" fill="#93c5fd" opacity="0.95" /><rect x="30.0" y="921.3" width="14.2" height="7.1" rx="3.5" transform="rotate(-11.6 37.1 924.9)" fill="#dbeafe" opacity="0.88" /><polygon points="32.5,938.0 43.5,936.3 45.2,945.6 35.0,949.0" fill="#e0f2fe" opacity="0.94" /><ellipse cx="13.4" cy="963.6" rx="4.7" ry="6.6" transform="rotate(-46.8 13.4 963.6)" fill="#ffffff" opacity="0.91" /><rect x="37.3" y="980.2" width="12.2" height="6.1" rx="3.0" transform="rotate(-32.4 43.4 983.2)" fill="#bae6fd" opacity="0.96" /><polygon points="29.7,996.8 36.0,999.1 30.8,1002.1" fill="#ffffff" opacity="0.89" /><polygon points="-3.5,1015.0 17.3,1007.7 10.0,1028.4" fill="#7dd3fc" opacity="0.94" /><ellipse cx="33.5" cy="1034.0" rx="5.9" ry="8.2" transform="rotate(2.4 33.5 1034.0)" fill="#ffffff" opacity="0.98" /><polygon points="3.4,1054.8 22.1,1048.2 15.5,1066.9" fill="#ffffff" opacity="0.87" /><polygon points="5.7,1072.5 27.2,1064.9 19.6,1086.4" fill="#7dd3fc" opacity="0.86" /><polygon points="16.2,1091.8 29.7,1089.7 31.8,1101.2 19.4,1105.3" fill="#ffffff" opacity="0.95" />
+</svg>
+    </div>
+
+    <!-- Main Content -->
+    <div class="resume-main">
+
+      <!-- Header -->
+      <header class="resume-header">
+        <h1 class="candidate-name">SAGAR P</h1>
+        <p class="candidate-subtitle">Information Science & Engineering Undergraduate &bull; Full-Stack & Systems Developer</p>
+      </header>
+
+      <!-- Two Columns -->
+      <div class="columns-container">
+
+        <!-- Left Column -->
+        <div class="left-col">
+
+          <!-- Summary -->
+          <section>
+            <h2 class="section-title">SUMMARY</h2>
+            <p class="summary-text">
+              Motivated Information Science & Engineering undergraduate at Atria Institute of Technology (CGPA 9.3) with solid foundations in Python, full-stack application development, and algorithmic optimization. Proven project lead in building mathematical engines (Linear Diophantine cash optimization) and production academic platforms; active student organizer with the Cultural Committee Atria managing campus logistics and audio systems. Eager to contribute technical execution, rapid prototyping, and collaborative energy to the GDG on Campus Core Team.
+            </p>
+          </section>
+
+          <!-- Projects -->
+          <section>
+            <h2 class="section-title">PROJECTS</h2>
+
+            <!-- Project 1: ATM Cash Combination Finder -->
+            <div class="project-entry">
+              <div class="entry-header">
+                <span class="entry-title">ATM Cash Combination Finder</span>
+                <span class="entry-role">Project Lead &bull; Oct 2024</span>
+              </div>
+              <div class="entry-tech">
+                <span>Python &bull; Flask &bull; SQLite &bull; Linear Diophantine Math &bull; Backtracking</span>
+                <a href="https://github.com/sagar-core/ATM-Cash-Finder" target="_blank" class="entry-link">[github.com/sagar-core/ATM-Cash-Finder]</a>
+              </div>
+              <ul class="bullets-list">
+                <li>Formulated and implemented an algorithm resolving Linear Diophantine equations to compute all valid dispensing combinations across ₹500, ₹200, ₹100, and ₹50 currency denominations.</li>
+                <li>Engineered optimization heuristics prioritizing minimal physical bill count while enforcing real-time currency cassette limits to prevent premature denomination depletion.</li>
+                <li>Built a responsive customer portal with digital withdrawal receipts and a secure administrative dashboard for cash restocking; presented mathematical proof directly to the Mathematics HOD.</li>
+              </ul>
+            </div>
+
+            <!-- Project 2: Student-Teacher Appointment Platform -->
+            <div class="project-entry">
+              <div class="entry-header">
+                <span class="entry-title">Student–Teacher Appointment Platform</span>
+                <span class="entry-role">Backend & Core Architecture</span>
+              </div>
+              <div class="entry-tech">
+                <span>Python &bull; Flask &bull; MySQL &bull; JavaScript &bull; HTML5/CSS3</span>
+              </div>
+              <ul class="bullets-list">
+                <li>Designed an academic consultation scheduling platform eliminating student walk-in conflicts and automating faculty office-hour bookings across departments.</li>
+                <li>Built role-based authentication workflows, dynamic slot availability calendars, approval dashboards, and automated email confirmation notifications.</li>
+              </ul>
+            </div>
+
+            <!-- Project 3: Donor Relationship Management Prototype -->
+            <div class="project-entry">
+              <div class="entry-header">
+                <span class="entry-title">Donor Relationship Management (CRM) Prototype</span>
+                <span class="entry-role">Centre for Wildlife Studies (CWS)</span>
+              </div>
+              <div class="entry-tech">
+                <span>Python &bull; Structured Schemas &bull; JavaScript &bull; AI Integration Heuristics</span>
+              </div>
+              <ul class="bullets-list">
+                <li>Architected a centralized CRM prototype for wildlife conservation operations, replacing dispersed spreadsheets with unified donor histories, pledge tiers, and campaign logs.</li>
+                <li>Integrated AI-assisted reminder workflows generating contextual follow-up prompts and impact report drafts to enhance long-term supporter engagement.</li>
+              </ul>
+            </div>
+
+          </section>
+
+          <!-- Experience -->
+          <section>
+            <h2 class="section-title">EXPERIENCE & LEADERSHIP</h2>
+            <div class="project-entry">
+              <div class="entry-header">
+                <span class="entry-title">Event Operations & Logistics Volunteer</span>
+                <span class="entry-role">2024 – Present</span>
+              </div>
+              <div class="entry-tech" style="color: #475569;">
+                Cultural Committee Atria (CCA) &bull; Atria Institute of Technology
+              </div>
+              <ul class="bullets-list">
+                <li>Co-organized college-wide flagship events (Community Day), managing 15+ student stalls, vendor coordination, and crowd logistics for 500+ attendees.</li>
+                <li>Managed technical audio systems and stage setups, monitoring live sound levels and AV cues during college ceremonies and hackathon presentations.</li>
+                <li>Coordinated communications with faculty leads and external participants to ensure smooth registration pipelines and operational execution.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Hackathons & Achievements -->
+          <section>
+            <h2 class="section-title">HACKATHONS & ACHIEVEMENTS</h2>
+            <ul class="bullets-list">
+              <li><strong>3rd Place — Atria Internal Hackathon (SIH Selection Round):</strong> Competed among ~30 competitive teams; led frontend interface design, structured data handling, and the final technical pitch.</li>
+              <li><strong>Departmental HOD Presentation:</strong> Invited to demonstrate the ATM Cash Combination Optimizer's mathematical models to the Mathematics Department Head.</li>
+              <li><strong>Pre-University Merit Scholarship:</strong> Awarded scholarship recognition for achieving <strong>92% Distinction</strong> in 10th-grade board examinations.</li>
+              <li><strong>Academic Excellence Award:</strong> Conferred distinction honours for achieving <strong>90% Distinction</strong> in 12th-grade Pre-University Board exams.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right Column (Sidebar) -->
+        <div class="right-col">
+
+          <!-- Contact Card -->
+          <div class="contact-card">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-list">
+              <a href="tel:+919844012199" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+91 98440 12199</span>
+              </a>
+              <a href="mailto:sagar.pv2006@gmail.com" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>sagar.pv2006@gmail.com</span>
+              </a>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Bengaluru, Karnataka, India</span>
+              </div>
+              <a href="https://github.com/sagar-core" target="_blank" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>github.com/sagar-core</span>
+              </a>
+              <a href="https://linkedin.com/in/sagar-p-9a7058388" target="_blank" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>linkedin.com/in/sagar-p-9a7058388</span>
+              </a>
+              <a href="https://sagar-core.github.io" target="_blank" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span>sagar-core.github.io</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <section>
+            <h2 class="section-title">SKILLS</h2>
+            <div class="skills-group">
+              <div class="skill-row"><strong>Programming:</strong> Python, C++, Java, SQL</div>
+              <div class="skill-row"><strong>Web & Backend:</strong> Flask, REST APIs, HTML5, CSS3, JavaScript (ES6+)</div>
+              <div class="skill-row"><strong>Databases:</strong> SQLite, MySQL</div>
+              <div class="skill-row"><strong>Tools & VCS:</strong> Git, GitHub, VS Code</div>
+              <div class="skill-row"><strong>AI & APIs:</strong> Gemini API, Prompt Design</div>
+              <div class="skill-row"><strong>Core Concepts:</strong> Data Structures, OOP, Backtracking Heuristics</div>
+              <div class="skill-row"><strong>Operations:</strong> Event Logistics, Live Audio & Stage AV Systems</div>
+            </div>
+          </section>
+
+          <!-- Education -->
+          <section>
+            <h2 class="section-title">EDUCATION</h2>
+
+            <div class="edu-entry">
+              <div class="edu-degree">B.E. in Information Science & Engineering</div>
+              <div class="edu-school">Atria Institute of Technology, Bengaluru</div>
+              <div class="edu-details">
+                <span>2025 – 2029</span>
+                <span class="edu-badge">CGPA: 9.3</span>
+              </div>
+            </div>
+
+            <div class="edu-entry">
+              <div class="edu-degree">Pre-University Course (PCMC)</div>
+              <div class="edu-school">Seshadripuram PU College, Bengaluru</div>
+              <div class="edu-details">
+                <span>Distinction &bull; Academic Award</span>
+                <span class="edu-badge">90%</span>
+              </div>
+            </div>
+
+            <div class="edu-entry">
+              <div class="edu-degree">Secondary School Certificate (SSLC)</div>
+              <div class="edu-school">Sathya English High School, Bengaluru</div>
+              <div class="edu-details">
+                <span>Distinction &bull; Merit Scholarship</span>
+                <span class="edu-badge">92%</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Areas of Focus -->
+          <section>
+            <h2 class="section-title">AREAS OF FOCUS</h2>
+            <div class="skills-group">
+              <div class="skill-row">Full-Stack Web Development</div>
+              <div class="skill-row">Mathematical & Algorithmic Optimization</div>
+              <div class="skill-row">Developer Community & Event Organizing</div>
+              <div class="skill-row">Rapid Prototyping & AI Workflow Tooling</div>
+            </div>
+          </section>
+
+          <!-- Languages -->
+          <section>
+            <h2 class="section-title">LANGUAGES</h2>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span>English</span>
+                <span class="lang-level">Professional Working</span>
+              </div>
+              <div class="lang-bar"><div class="lang-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span>Kannada</span>
+                <span class="lang-level">Native / Fluent</span>
+              </div>
+              <div class="lang-bar"><div class="lang-progress" style="width: 100%;"></div></div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span>Hindi</span>
+                <span class="lang-level">Working Proficiency</span>
+              </div>
+              <div class="lang-bar"><div class="lang-progress" style="width: 80%;"></div></div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
